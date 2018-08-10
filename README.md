@@ -83,8 +83,15 @@ pip install scrapyd
 ## 配置gerapy的主机
 在gerapy主界面点击左侧 Clients 选项卡，即主机管理页面，添加我们的 Scrapyd 远程服务，点击右上角的create创建按钮即可添加我们需要管理的 Scrapyd 服务。
 创建主机，名称，如spiderserver，如果scrapyd部署在本机上，使用127.0.0.1和默认端口，如果scrapyd部署在服务器上，使用公网ip和指定端口
+创建主机后，点击主机管理，状态栏现实normal，可正常使用，如果现实error则需要检查是否安装并启动了scrapyd
 
+## 在gerapy中部署爬虫项目
+将爬虫项目复制到gerapy目录下的projects目录下，点击进入项目管理-选择projects选项卡，可以看到project条中存在项目，其中build和configurable都出现×，operations项下-在相应项目条中点击deploy
+出现project和build project对话框，project中应当显示没有打包的信息，设置描述desription信息后点击build project对话框中的build，rebuild按钮，打包完成
+注意project条中的项目保持normal状态
 
+## 调度爬虫
+进入主机管理，项目操作中点击调度，出现爬虫项目对话框，点击运行，现实运行结果
 
 ## Docker
 容器打包
